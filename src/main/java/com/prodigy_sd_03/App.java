@@ -13,13 +13,14 @@ import javafx.stage.Stage;
 public class App extends Application {
 
     private static Scene scene;
-    private UserController uController = new UserController();
+    private final UserController uController = new UserController();
 
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("user"));
+        scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
         stage.setTitle("User Registration");
-        uController.setStage(stage);
+        UserController.setStage(stage);
         stage.setScene(scene);
         stage.show();
     }
@@ -35,8 +36,5 @@ public class App extends Application {
 
     public static void main(String[] args) {
         launch();
-//        DbConnection db = new DbConnection();
-//        db.getDBConn();
-//        System.out.println("COnnected!"+ db.getCon());
     }
 }

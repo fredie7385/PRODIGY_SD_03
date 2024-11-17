@@ -3,6 +3,7 @@ module com.prodigy_sd_03 {
     requires javafx.fxml;
     requires java.base;
     requires java.sql;
+    requires mysql.connector.j;
 
     opens com.prodigy_sd_03 to javafx.fxml;
     exports com.prodigy_sd_03;

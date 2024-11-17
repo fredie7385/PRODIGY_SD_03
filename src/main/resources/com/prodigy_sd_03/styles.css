@@ -1,0 +1,59 @@
+/* style.css */
+
+/* Root styles */
+.root {
+    -fx-font-family: "Arial, sans-serif";
+    -fx-font-size: 14px;
+    -fx-base: #f0f0f0; /* Light background */
+    -fx-background-color: #ffffff;
+}
+
+/* General text styles */
+.label {
+    -fx-text-fill: #333333; /* Dark gray text */
+}
+
+/* Button styles */
+.button {
+    -fx-background-color: #007bff; /* Primary color */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 10px; /* Padding for buttons */
+    -fx-background-radius: 5px; /* Rounded corners */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.0, 0, 1); /* Shadow effect */
+}
+
+.button:hover {
+    -fx-background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Input field styles */
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+
+.text-field:focused {
+    -fx-border-color: #007bff; /* Change border color when focused */
+}
+
+/* Table view styles */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #ccc;
+}
+
+.table-view .column-header {
+    -fx-background-color: #007bff; /* Header background color */
+    -fx-text-fill: white; /* Header text color */
+}
+
+/* Alert styles */
+.alert {
+    -fx-background-color: #f8d7da; /* Light red background for alerts */
+    -fx-text-fill: #721c24; /* Dark red text color */
+    -fx-padding: 10px; /* Padding for alerts */
+    -fx-border-radius: 5px; /* Rounded corners for alerts */
+}

@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane id="AnchorPane" prefHeight="551.0" prefWidth="538.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.prodigy_sd_03.UserController">
+<AnchorPane id="AnchorPane" onDragDetected="#exitClick" prefHeight="551.0" prefWidth="538.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.prodigy_sd_03.UserController">
    <children>
       <GridPane layoutX="20.0" layoutY="14.0">
         <columnConstraints>
@@ -76,7 +76,7 @@
          <effect>
             <Glow />
          </effect></Button>
-      <Button fx:id="btnExit" layoutX="413.0" layoutY="151.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="EXIT">
+      <Button fx:id="btnExit" layoutX="413.0" layoutY="151.0" mnemonicParsing="false" onAction="#exitClick" prefHeight="30.0" prefWidth="80.0" text="EXIT">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
