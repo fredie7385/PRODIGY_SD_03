@@ -69,7 +69,7 @@
          <effect>
             <Glow />
          </effect></Button>
-      <Button fx:id="btnDelete" layoutX="321.0" layoutY="151.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="30.0" prefWidth="80.0" text="DELETE">
+      <Button fx:id="btnDelete" layoutX="321.0" layoutY="151.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="30.0" prefWidth="80.0" text="DELETE" textAlignment="CENTER">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

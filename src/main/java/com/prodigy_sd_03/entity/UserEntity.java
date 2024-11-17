@@ -97,8 +97,7 @@ public class UserEntity {
     
 //    we use this constructor to add data
         public UserEntity(String firstname, String lastname, Integer phoneNo, String email) {
-        this.id = id;
-        this.firstname = firstname;
+         this.firstname = firstname;
         this.lastname = lastname;
         this.phoneNo = phoneNo;
         this.email = email;
