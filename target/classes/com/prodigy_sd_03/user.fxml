@@ -155,7 +155,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label text="User Registration" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+            <Label text="Contact Management System" GridPane.halignment="CENTER" GridPane.valignment="TOP">
                <font>
                   <Font name="DejaVu Serif Condensed Bold" size="24.0" />
                </font>
