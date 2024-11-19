@@ -5,13 +5,15 @@
     -fx-font-family: "Arial, sans-serif";
     -fx-font-size: 14px;
     -fx-base: #f0f0f0; /* Light background */
-    -fx-background-color: #ffffff;
+    -fx-background-color: #ffff;
+    -fx-padding:3;
 }
 
 /* General text styles */
 .label {
-    -fx-text-fill: #333333; /* Dark gray text */
-}
+    -fx-text-fill: #333333;
+    -fx-padding:3;
+    }
 
 /* Button styles */
 .button {

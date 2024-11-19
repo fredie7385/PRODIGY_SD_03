@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -11,79 +12,100 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" onDragDetected="#exitClick" prefHeight="551.0" prefWidth="538.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.prodigy_sd_03.UserController">
+<AnchorPane id="AnchorPane" onDragDetected="#exitClick" opacity="0.86" prefHeight="610.0" prefWidth="538.0" style="-fx-background-color: #edece8;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.prodigy_sd_03.UserController">
    <children>
-      <GridPane layoutX="20.0" layoutY="14.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
+      <GridPane alignment="CENTER" layoutX="23.0" layoutY="74.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
          <children>
-            <Label text="FIRST NAME:" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
-            <Label text="LAST NAME:" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-            <Label text="PHONE NO:" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-            <Label text="EMAIL:" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="FIRST NAME:" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+                  <Label text="LAST NAME:" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Label text="PHONE NO:" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                  <Label text="EMAIL:" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+               </children>
+            </GridPane>
+            <GridPane prefHeight="120.0" prefWidth="374.0" GridPane.columnIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="fieldFirstname" />
+                  <TextField fx:id="fieldLastname" GridPane.rowIndex="1" />
+                  <TextField fx:id="fieldPhoneNo" prefHeight="26.0" prefWidth="370.0" GridPane.rowIndex="2" />
+                  <TextField fx:id="fieldEmail" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
          </children>
       </GridPane>
-      <GridPane layoutX="120.0" layoutY="14.0" prefHeight="120.0" prefWidth="374.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
+      <Group layoutX="43.0" layoutY="203.0">
          <children>
-            <TextField fx:id="fieldFirstname" />
-            <TextField fx:id="fieldLastname" GridPane.rowIndex="1" />
-            <TextField fx:id="fieldPhoneNo" prefHeight="26.0" prefWidth="370.0" GridPane.rowIndex="2" />
-            <TextField fx:id="fieldEmail" GridPane.rowIndex="3" />
+            <Button fx:id="btnNew" layoutX="4.099998474121094" layoutY="3.100006103515625" mnemonicParsing="false" onAction="#clickNew" prefHeight="28.0" prefWidth="80.0" text="NEW">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <Button fx:id="btnSave" layoutX="96.0999984741211" layoutY="3.100006103515625" mnemonicParsing="false" onAction="#addUser" prefHeight="28.0" prefWidth="80.0" text="SAVE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <Button fx:id="btnUpdate" layoutX="188.0999984741211" layoutY="3.100006103515625" mnemonicParsing="false" onAction="#updateUser" prefHeight="28.0" prefWidth="80.0" text="UPDATE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <Button fx:id="btnDelete" layoutX="280.0999984741211" layoutY="3.100006103515625" mnemonicParsing="false" onAction="#deleteUser" prefHeight="28.0" prefWidth="80.0" text="DELETE" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <Button fx:id="btnExit" layoutX="372.0999984741211" layoutY="3.100006103515625" mnemonicParsing="false" onAction="#exitClick" prefHeight="28.0" prefWidth="80.0" text="EXIT">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
          </children>
-      </GridPane>
-      <Button fx:id="btnNew" layoutX="45.0" layoutY="151.0" mnemonicParsing="false" onAction="#clickNew" prefHeight="30.0" prefWidth="80.0" text="NEW">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <effect>
-            <Glow />
-         </effect></Button>
-      <Button fx:id="btnSave" layoutX="135.0" layoutY="151.0" mnemonicParsing="false" onAction="#addUser" prefHeight="30.0" prefWidth="80.0" text="SAVE">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <effect>
-            <Glow />
-         </effect></Button>
-      <Button fx:id="btnUpdate" layoutX="228.0" layoutY="151.0" mnemonicParsing="false" onAction="#updateUser" prefHeight="30.0" prefWidth="80.0" text="UPDATE">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <effect>
-            <Glow />
-         </effect></Button>
-      <Button fx:id="btnDelete" layoutX="321.0" layoutY="151.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="30.0" prefWidth="80.0" text="DELETE" textAlignment="CENTER">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <effect>
-            <Glow />
-         </effect></Button>
-      <Button fx:id="btnExit" layoutX="413.0" layoutY="151.0" mnemonicParsing="false" onAction="#exitClick" prefHeight="30.0" prefWidth="80.0" text="EXIT">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <effect>
-            <Glow />
-         </effect></Button>
-      <TableView fx:id="tableView" layoutX="30.0" layoutY="237.0" minHeight="-Infinity" onMouseClicked="#mouseClick" prefHeight="300.0" prefWidth="465.0">
+      </Group>
+      <TableView fx:id="tableView" layoutX="34.0" layoutY="296.0" minHeight="-Infinity" onMouseClicked="#mouseClick" prefHeight="300.0" prefWidth="468.0">
         <columns>
           <TableColumn fx:id="colId" minWidth="-Infinity" prefWidth="0.0" text="C1" />
           <TableColumn fx:id="colFirstname" prefWidth="107.0" text="FIRST NAME" />
@@ -92,18 +114,40 @@
             <TableColumn fx:id="colEmail" prefWidth="175.0" text="EMAIL ADDRESS" />
         </columns>
       </TableView>
-      <GridPane layoutX="20.0" layoutY="195.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
+      <GridPane layoutX="23.0" layoutY="257.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
          <children>
-            <Label prefHeight="18.0" prefWidth="65.0" text="SEARCH:" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="18.0" prefWidth="65.0" text="SEARCH:" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+               </children>
+            </GridPane>
+            <GridPane prefHeight="30.0" prefWidth="374.0" GridPane.columnIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="fieldSearch" promptText="Search..." />
+               </children>
+            </GridPane>
          </children>
       </GridPane>
-      <GridPane layoutX="120.0" layoutY="195.0" prefHeight="30.0" prefWidth="374.0">
+      <GridPane layoutX="33.0" layoutY="14.0" prefHeight="60.0" prefWidth="474.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
@@ -111,7 +155,11 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextField fx:id="fieldSearch" promptText="Search..." />
+            <Label text="User Registration" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+               <font>
+                  <Font name="DejaVu Serif Condensed Bold" size="24.0" />
+               </font>
+            </Label>
          </children>
       </GridPane>
    </children>

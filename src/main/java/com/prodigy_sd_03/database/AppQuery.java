@@ -5,10 +5,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import static com.prodigy_sd_03.UserController.showAlert;
+import static com.prodigy_sd_03.errorHandler.ErrorHandler.showAlert;
+import static com.prodigy_sd_03.errorHandler.ErrorHandler.showError;
 
 /**
  *
@@ -31,7 +35,6 @@ public class AppQuery {
             DbConnection.closeConnection();
 
         } catch (SQLException e) {
-            e.printStackTrace(); // Consider logging this instead
             showAlert("Database Error", "An error occurred while accessing the database.", e.getMessage());
         }
     }
@@ -52,9 +55,9 @@ public class AppQuery {
             rs.close();
             st.close();
             DbConnection.closeConnection();
-        } catch (SQLException e) {
-            e.printStackTrace(); // Consider logging this instead
-            showAlert("Database Error", "An error occurred while accessing the database.", e.getMessage());
+        }  catch (SQLException e) {
+            Logger.getLogger(AppQuery.class.getName()).log(Level.SEVERE, "Error retrieving user list from database", e);
+            showError("User List Error", "Unable to retrieve the user list from the database.");
         }
         return userList;
     }

@@ -8,6 +8,10 @@ package com.prodigy_sd_03.database;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import static com.prodigy_sd_03.errorHandler.ErrorHandler.showError;
 
 /**
  *
@@ -29,8 +33,9 @@ public class DbConnection {
                     }
                 } else {
                 }
-            } catch (SQLException ex) {
-                ex.printStackTrace();
+            } catch (SQLException e) {
+                Logger.getLogger(DbConnection.class.getName()).log(Level.SEVERE, "Error connecting to database", e);
+                showError("Database Connection Error", "Unable to connect to the database. Please check your database settings.");
             }
         }
     }
@@ -48,11 +53,12 @@ public class DbConnection {
     public static void setCon(Connection aCon) {
         con = aCon;
     }
-    public static void closeConnection(){
-        try{
+    public static void closeConnection() {
+        try {
             con.close();
-        }catch(SQLException e){
-            e.printStackTrace();
+        } catch (SQLException e) {
+            Logger.getLogger(DbConnection.class.getName()).log(Level.SEVERE, "Error closing database connection", e);
+            showError("Database Connection Error", "Unable to close the database connection.");
         }
-    }    
+    }
 }

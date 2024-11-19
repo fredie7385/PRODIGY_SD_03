@@ -9,4 +9,5 @@ module com.prodigy_sd_03 {
     exports com.prodigy_sd_03;
     exports com.prodigy_sd_03.database;
     exports com.prodigy_sd_03.entity;
+    exports com.prodigy_sd_03.errorHandler;
 }
