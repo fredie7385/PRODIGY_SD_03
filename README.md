@@ -1,4 +1,4 @@
-# JavaFX Contact Management Application
+Contact Management Application
 
 ## Overview
 
